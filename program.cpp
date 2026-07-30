@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-using the namespace std;
+using namespace std;
 
 void selectionsort(int arr[], int n){
     int min_index;
