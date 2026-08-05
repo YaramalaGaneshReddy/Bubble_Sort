@@ -1,29 +1,24 @@
-#include <iostream>
-#include <vector>
-#include <utility>
-
+#include <bits/stdc++.h>
 using namespace std;
-
-void insertionsort(vector<int>& arr, int n) {
-    for (int i = 1; i <= n - 1; i++) {
+void insertionsort(int arr[], int n){
+    for(int i = 1; i <= n-1; i++){
         int j = i;
-        while (j >= 1 && arr[j - 1] > arr[j]) {
-            swap(arr[j - 1], arr[j]);
+        while((arr[j-1] > arr[j]) && j >= 1){
+            int temp = arr[j-1];
+            arr[j-1] = arr[j];
+            arr[j] = temp;
             j--;
         }
     }
 }
-
-int main() {
+int main(){
     int n;
-    if (cin >> n) {
-        vector<int> arr(n);
-        for (int i = 0; i < n; i++) cin >> arr[i];
-        insertionsort(arr, n);
-        for (auto x : arr) {
-            cout << x << " ";
-        }
-        cout << endl;
+    cin >> n;
+    int arr[n];
+    for(int i = 0; i < n; i++) cin >> arr[i];
+    insertionsort(arr,n);
+    for(auto x: arr){
+        cout << x << " ";
     }
-    return 0;
+        return 0;
 }
