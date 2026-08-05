@@ -1,9 +1,9 @@
-# Bubble Sort Algorithm in C++
+# Insertion Sort Algorithm in C++
 
-This repository contains the optimized C++ implementation of the **Bubble Sort** algorithm.
+This repository contains the C++ implementation of the **Insertion Sort** algorithm.
 
 ## 📌 Description
-Bubble Sort is a simple comparison-based sorting algorithm. It works by repeatedly stepping through the list, comparing adjacent elements and swapping them if they are in the wrong order. Pass through the list is repeated until the list is sorted.
+Insertion Sort is a simple comparison-based sorting algorithm that builds the final sorted array one item at a time. It works by taking elements from the unsorted part and inserting them into their correct position in the sorted part.
 
 ## 🚀 How to Run
 
@@ -24,13 +24,13 @@ g++ program.cpp -o program
 ### Example
 **Input:**
 ```
-6
-64 34 25 12 22 11
+5
+12 11 13 5 6
 ```
 
 **Output:**
 ```
-11 12 22 25 34 64 
+5 6 11 12 13 
 ```
 
 ## ⏱️ Complexity
