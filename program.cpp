@@ -4,16 +4,16 @@
 
 using namespace std;
 
-void selectionsort(vector<int>& arr, int n) {
-    for (int i = 0; i <= n - 2; i++) {
-        int min_index = i;
-        for (int j = i; j <= n - 1; j++) {
-            if (arr[j] < arr[min_index]) {
-                min_index = j;
+void bubblesort(vector<int>& arr, int n) {
+    for (int i = n - 1; i >= 1; i--) {
+        bool swapped = false;
+        for (int j = 0; j <= i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(arr[j], arr[j + 1]);
+                swapped = true;
             }
         }
-        // swap arr[i] and arr[min_index]
-        swap(arr[i], arr[min_index]);
+        if (!swapped) break;
     }
 }
 
@@ -22,7 +22,7 @@ int main() {
     if (cin >> n) {
         vector<int> arr(n);
         for (int i = 0; i < n; i++) cin >> arr[i];
-        selectionsort(arr, n);
+        bubblesort(arr, n);
         for (auto x : arr) {
             cout << x << " ";
         }
